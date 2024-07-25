@@ -1,40 +1,22 @@
 const staticCacheName = 'CacheSpace1';
-const assetUrls = [
-  '/icons',
-  '/css/style.css',
-  '/background',
-  '/index.html',
-];
-
-self.addEventListener('install', event => {
-  event.waitUntil(
-    (async () => {
-      const cache = await caches.open(staticCacheName);
-      for (const url of assetUrls) {
-        try {
-		  const fullUrl = new URL(url, location.origin).href;
-          await cache.add(url);
-          console.log(Cached asset: ${url});
-        } catch (error) {
-          console.error(Failed to cache asset: ${url}, error);
-          throw error;  // Прервать установку Service Worker, если любой запрос не удался
-        }
-      }
-    })()
-  );
-});
-
-self.addEventListener('activate', event => {
-  console.log('[SW]: activate');
-});
-
-self.addEventListener('fetch', event => {
-  console.log('Fetch', event.request.url);
-  event.respondWith(cacheFirst(event.request));
-});
-
-async function cacheFirst(request) {
-  const cache = await caches.open(staticCacheName);
-  const cached = await cache.match(request);
-  return cached ?? await fetch(request);
-}
+const asseturls = [
+'/icons',
+'/css/style.css',
+'/background',
+'/index. html',
+]
+self addEventListener('install', async event => {
+const cache = await caches.open(staticCacheName)
+await cache.addAll(asseturls)
+｝）
+self. addEventListener('activate'
+, event => K
+console. log('[SW]: activate')
+self.addEventListener ('fetch', event => {
+console. log( 'Fetch'
+, event.request.url)
+event. respondWith(cacheFirst(event.request))
+})
+async function cacheFirstrequest) ‹
+const cached = await caches.match (request)
+return cached ?? await fetch (request)
