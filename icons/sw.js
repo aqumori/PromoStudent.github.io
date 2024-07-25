@@ -12,12 +12,12 @@ self.addEventListener('install', event => {
       const cache = await caches.open(staticCacheName);
       for (const url of assetUrls) {
         try {
-		  const fullUrl = new URL(url, location.origin).href;
-          await cache.add(url);
-          console.log(Cached asset: ${url});
+          const fullUrl = new URL(url, location.origin).href;
+          await cache.add(fullUrl);
+          console.log(Cached asset: ${fullUrl}); // Исправленная строка 
         } catch (error) {
-          console.error(Failed to cache asset: ${url}, error);
-          throw error;  // Прервать установку Service Worker, если любой запрос не удался
+          console.error(Failed to cache asset: ${fullUrl}, error);
+          throw error; 
         }
       }
     })()
