@@ -14,7 +14,7 @@ self.addEventListener('install', event => {
         try {
           const fullUrl = new URL(url, location.origin).href;
           await cache.add(fullUrl);
-          console.log(Cached asset: ${fullUrl}); // Исправленная строка 
+          console.log(Cached asset: ${fullUrl}); 
         } catch (error) {
           console.error(Failed to cache asset: ${fullUrl}, error);
           throw error; 
