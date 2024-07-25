@@ -3,22 +3,22 @@ const asseturls = [
 '/icons',
 '/css/style.css',
 '/background',
-'/index. html',
+'/index.html',
 ]
 
-self addEventListener('install', async event => {
-const cache = await caches.open(staticCacheName)
-await cache.addAll(asseturls)
+self.addEventListener('install', async event => {
+  const cache = await caches.open(staticCacheName)
+  await cache.addAll(asseturls)
 ｝）
-self. addEventListener('activate', event => {
-console. log('[SW]: activate')
+self.addEventListener('activate', event => {
+  console. log('[SW]: activate')
 }
                        
 self.addEventListener ('fetch', event => {
-console. log( 'Fetch', event.request.url)
-event. respondWith(cacheFirst(event.request))
+  console. log('Fetch', event.request.url)
+  event. respondWith(cacheFirst(event.request))
 })
 async function cacheFirstrequest) {
-const cached = await caches.match (request)
-return cached ?? await fetch (request)
+  const cached = await caches.match (request)
+  return cached ?? await fetch (request)
 }
