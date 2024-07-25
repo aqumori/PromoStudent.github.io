@@ -12,6 +12,7 @@ self.addEventListener('install', event => {
       const cache = await caches.open(staticCacheName);
       for (const url of assetUrls) {
         try {
+		  const fullUrl = new URL(url, location.origin).href;
           await cache.add(url);
           console.log(Cached asset: ${url});
         } catch (error) {
