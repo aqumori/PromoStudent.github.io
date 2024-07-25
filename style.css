@@ -1,0 +1,229 @@
+/* Стили для header */
+header
+{
+	background-color: #f2c5a5; /* Цвет фона */
+	padding: 20px 0; /* Отступы сверху и снизу */
+}
+
+/* Стили для container */
+.container
+{
+	max-width: 960px; /* Максимальная ширина блока */
+	margin: 0 auto; /* Центрирование */
+	display: flex; /* Flexbox для размещения элементов */
+	justify-content: space-between; /* Размещение элементов по краям */
+	align-items: center; /* Вертикальное выравнивание */
+}
+
+/* Стили для logo-container */
+.logo-container
+{
+	display: flex; /* Используем Flexbox для размещения элементов */
+	align-items: center; /* Вертикальное выравнивание */
+}
+
+.logo-image
+{
+	display: inline-block; /* Выравниваем изображение в строку */
+	vertical-align: middle; /* Выравниваем изображение по вертикали с текстом */
+	width: 95px; /* Ширина изображения */
+	height: auto; /* Автоматическая высота, чтобы сохранить пропорции */
+	margin-right: 10px; /* Отступ справа от изображения */
+}
+
+a
+{
+    text-decoration: none;
+	color: inherit;
+    cursor: pointer; 
+}
+
+/* Стили для logo */
+.logo
+{
+	font-size: 40px; /* Размер шрифта заголовка */
+	font-weight: bold; /* Жирный шрифт */
+	margin-right: 40px;
+}
+
+/* Стили для меню */
+nav ul
+{
+	list-style: none; /* Убираем маркеры списка */
+	padding: 0; /* Убираем отступы */
+	margin: 0; /* Убираем поля */
+}
+
+nav li
+{
+	display: inline-block; /* Расположение элементов в строку */
+	margin-left: 20px; /* Отступ слева от предыдущего пункта */
+}
+
+nav a
+{
+	text-decoration: none; /* Убираем подчеркивание ссылок */
+	color: #333; /* Цвет текста */
+	font-size: 20px; /* Размер шрифта заголовка */
+	font-family: arial, verdana, courier;
+}
+
+nav a: hover
+{
+	color: #201c17;
+}
+
+.about
+{
+    display: flex;
+}
+
+.about h2
+{
+    margin-top: 20px;
+    margin-left: auto;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.describe
+{
+	font-size: 20px; /* Размер шрифта заголовка */
+	width: 75%; /* Ширина контейнера (например, 80% от ширины родительского элемента) */
+    margin: 0 auto; /* Выравнивание по центру */
+    padding: 10px; /* Отступы внутри контейнера */
+}
+
+.text-wrap
+{
+	word-wrap: break-word; /* Разрешить перенос слов */
+	color: #333; /* Цвет текста */
+	font-size: 18px; /* Размер шрифта заголовка */
+	font family: arial, verdana, courier;
+}
+
+* Стили для popular-offers */
+.popular-offers
+{
+    margin-top: 10px;
+    display: flex;
+}
+
+.popular-offers h2
+{
+    margin-top: 20px;
+    margin-left: auto;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+/* Стили для offers-grid */
+.offers-grid
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+    gap: 20px; /* Отступ между элементами */
+}
+
+.offer
+{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.offer-image
+{
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.offer-text
+{
+    flex: 1;
+}
+
+.offer-text h3
+{
+    margin-bottom: 10px;
+}
+
+footer
+{
+	background-color: #f2c5a5;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center; 
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 4%;
+    z-index: 1;
+    display: flex; /* Превращаем footer в flex container */
+    align-items: center; /* Выравниваем текст по центру по вертикали */
+}
+
+/* Стили для stores */
+.stores
+{
+    margin-top: 40px;
+}
+
+.stores h2
+{
+    margin-top: 20px;
+    margin-left: 10px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+/* Стили для stores-grid */
+.stores-grid {
+  display: flex; /* Размещаем изображения в один ряд */
+  flex-wrap: wrap; /* Разрешаем перенос на новую строку, если изображения не помещаются */
+  justify-content: center; /* Центрируем изображения по горизонтали */
+}
+
+.store {
+  width: 200px; /* Ширина каждого изображения */
+  height: 150px; /* Высота каждого изображения */
+  margin: 10px; /* Отступы между изображениями */
+}
+
+.store img {
+  width: 100%; /* Занимаем всю доступную ширину */
+  height: 100%; /* Занимаем всю доступную высоту */
+  object-fit: cover; /* Масштабируем изображение, чтобы оно заполнило всю область */
+}
+
+.store h3 {
+  text-align: center; /* Центрируем подпись под изображением */
+  margin-top: 5px; /* Отступ сверху от изображения */
+}
+
+.profile-content
+{
+    display: flex; /* Размещаем элементы в строку */
+}
+
+.profile-image
+{
+    margin-right: 20px; /* Отступ от формы */
+	margin-top: 40px;
+	position: absolut;
+}
+
+.profile-image img
+{
+    width: 200px; /* Ширина фотографии */
+    height: 200px; /* Высота фотографии */
+    border-radius: 50%; /* Делаем круглую фотографию */
+}
+
+.profile-form
+{
+	text-align: left; 
+    width: 300px; /* Устанавливаем ширину для формы */
+}
