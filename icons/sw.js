@@ -7,7 +7,7 @@ const assetUrls = [
 ];
 
 self.addEventListener('install', event => {
-  event.waitUntil(
+  event.waitUntil
     (async () => {
       const cache = await caches.open(staticCacheName);
       for (const url of assetUrls) {
